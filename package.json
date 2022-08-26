@@ -1,0 +1,31 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.3.0",
+    "axios": "^0.27.2",
+    "axios-case-converter": "^0.9.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "bootstrap": "^5.2.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react_ujs": "^2.6.2",
+    "turbolinks": "^5.2.0",
+    "vue": "^3.2.37",
+    "vue-loader": "^17.0.0",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@webpack-cli/serve": "^1.7.0",
+    "webpack-dev-server": "^4.10.0"
+  }
+}

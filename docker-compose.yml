@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./dev/Dockerfile
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - '3000:3000'
+    environment:
+      - 'HOST=9920-14-3-72-98.ngrok.io' # ngrokで生成された値に変える
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - '3312:3306'
+    environment:
+      - 'MYSQL_USER=root'
+      - 'MYSQL_ROOT_PASSWORD=password'
+      - 'MYSQL_DATABASE=map_database'  # 作成したいdatabase名を記述
+    volumes:
+      - datadir:/var/lib/mysql
+volumes:
+  bundle:
+  datadir:

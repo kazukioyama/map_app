@@ -1,0 +1,2 @@
+class Lodging < ApplicationRecord
+end
