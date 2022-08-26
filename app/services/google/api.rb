@@ -1,11 +1,9 @@
 require 'json'
 require 'csv'
 require 'uri'
-require 'pry-byebug'
-require 'faraday'
 
 BASE_URL = 'https://maps.googleapis.com'
-API_KEY = ''
+API_KEY = ENV['API_KEY']
 
 def main(municipality_address, type, lat_division, lng_division, csv_file_name)
   start_time = Time.now
