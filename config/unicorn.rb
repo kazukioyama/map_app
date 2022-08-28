@@ -1,4 +1,4 @@
-app_path = File.expand_path('../../../', __FILE__)
+app_path = File.expand_path('../../', __FILE__)
 
 #アプリケーションサーバの性能を決定する
 worker_processes 1
