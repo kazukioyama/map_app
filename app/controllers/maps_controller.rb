@@ -5,7 +5,7 @@ class MapsController < ApplicationController
   require 'uri'
 
   BASE_URL = 'https://maps.googleapis.com'
-  API_KEY = ENV['API_KEY']
+  API_KEY = Rails.application.credentials.web[:api_key]
 
   def index
   end
