@@ -7,4 +7,11 @@ Rails.application.routes.draw do
   get 'maps' => 'maps#index'
   post 'maps' => 'maps#fetch_map_api'
 
+  get 'calendars' => 'calendars#index'
+
+  get 'calendars/mail' => 'calendars#mail'
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end
